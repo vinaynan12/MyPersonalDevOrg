@@ -1,19 +1,36 @@
-# This is a basic workflow that is manually triggered
+# This is a basic workflow to help you get started with Actions
 
-name: My Personal Org
+name: Deploy to Salesforce  Org
 
+
+# On Push to Master/Main this will be triggered.
 on:
   push:
-    branches: [ main ]
-env:
-  GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  test_pull_request:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - name: Install SFDX CLI
-      - run: npm install sfdx-cli --global
-      - run: sfdx force:auth:jwt:grant --clientid 3MVG9ojmGst1I5HO05Iq5HjeRyUEXzBJOUHtAhXyHRpIUK.54KZ1kJ6PekO31DjiwfDRsGtUM55gbCBljdIAG --jwtkeyfile server.key --username vnarayanaswamy@suyati.com.devops1 --instanceurl https://test.salesforce.com -a Dev1
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Setup Node
+    - name: Setup Node
+      uses: actions/setup-node@v1
+    
+    # Install SFDX CLI
+    - name: Install SFDX CLI
+      run: npm install sfdx-cli --global
+
+    # Authorize SF Org
+    - name: Authorize SF Org
+ 
+      run: sfdx force:auth:jwt:grant --clientid 3MVG9ojmGst1I5HO05Iq5HjeRyUEXzBJOUHtAhXyHRpIUK.54KZ1kJ6PekO31DjiwfDRsGtUM55gbCBljdIAG --jwtkeyfile server.key --username vnarayanaswamy@suyati.com.devops1 --instanceurl https://test.salesforce.com -a Dev1
