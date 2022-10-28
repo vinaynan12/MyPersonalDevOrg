@@ -3,6 +3,7 @@
 	<types>
 		<members>Account.Acct_Manager2__c</members>
 		<members>Account.Acct_Manager3__c</members>
+		<members>Account.Acct_Manager45__c</members>
 		<members>Account.Acct_Manager__c</members>
 		<members>AccountBrand.emailfield__c</members>
 		<members>Campaign.Acct_Managern__c</members>
