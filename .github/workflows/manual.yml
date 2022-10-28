@@ -36,3 +36,15 @@ jobs:
     - name: Authorize SF Org
  
       run: sfdx force:auth:jwt:grant --clientid 3MVG9ojmGst1I5HO05Iq5HjeRyUEXzBJOUHtAhXyHRpIUK.54KZ1kJ6PekO31DjiwfDRsGtUM55gbCBljdIAG --jwtkeyfile  ./buildfiles/server.key  --username vnarayanaswamy@suyati.com.devops1 --instanceurl https://test.salesforce.com -a Dev1
+      
+          # Convert to Deploy Source
+    - name: Convert to Deploy Source
+      run: sfdx force:source:convert -r ./force-app -d ./toDeploy
+    
+    # Run Validation of Deploy Source
+    - name: Run Validation on Deploy Source
+      run: sfdx force:mdapi:deploy -c -d ./toDeploy -u Dev1
+    
+    # Deploy
+    - name : Deploy to SF Org
+      run: sfdx force:mdapi:deploy -d ./toDeploy -u Dev1 -w 10
