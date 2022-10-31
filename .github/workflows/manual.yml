@@ -38,7 +38,7 @@ jobs:
         CLIENT_ID: ${{ secrets.CLIENT_ID }}
    
  
-      run: sfdx force:auth:jwt:grant --clientid 3MVG9ojmGst1I5HO05Iq5HjeRyUEXzBJOUHtAhXyHRpIUK.54KZ1kJ6PekO31DjiwfDRsGtUM55gbCBljdIAG --jwtkeyfile  ./buildfiles/server.key  --username vnarayanaswamy@suyati.com.devops1 --instanceurl https://test.salesforce.com -a Dev1
+      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile  ./buildfiles/server.key  --username vnarayanaswamy@suyati.com.devops1 --instanceurl https://test.salesforce.com -a Dev1
       
           # Convert to Deploy Source
     - name: Convert to Deploy Source
