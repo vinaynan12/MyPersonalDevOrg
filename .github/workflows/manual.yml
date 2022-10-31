@@ -39,7 +39,7 @@ jobs:
         SALESFORCE_USERNAME: ${{ secrets.SALESFORCE_USERNAME }}
    
  
-      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile  ./buildfiles/server.key  --username SALESFORCE_USERNAME --instanceurl https://test.salesforce.com -a Dev1
+      run: sfdx force:auth:jwt:grant --clientid $CLIENT_ID --jwtkeyfile  ./buildfiles/server.key  --username $SALESFORCE_USERNAME --instanceurl https://test.salesforce.com -a Dev1
       
           # Convert to Deploy Source
     - name: Convert to Deploy Source
