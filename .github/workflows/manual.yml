@@ -48,8 +48,8 @@ jobs:
     
     # Run Validation of Deploy Source
     - name: Run Validation on Deploy Source
-      run: sfdx force:mdapi:deploy -c -d ./toDeploy -u Dev1
+      run: sfdx force:source:deploy -c -x manifest/package.xml -u Dev1
     
     # Deploy
-    - name : Deploy to SF Org
-      run: sfdx force:mdapi:deploy -d ./toDeploy -u Dev1 -w 10
+    - name : Deploy to SF Org            
+      run: sfdx force:source:deploy -x manifest/package.xml -u Dev1
