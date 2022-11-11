@@ -4,5 +4,12 @@
 		<members>BusinessBrand.BusinessExecuctive__c</members>
 		<name>CustomField</name>
 	</types>
+	<types>
+        <members>AccountContactclass</members>
+        <members>AccountContactclass_TGN_TEST</members>
+        <name>ApexClass</name>
+    </types>
+
 	<version>55.0</version>
 </Package>
+
