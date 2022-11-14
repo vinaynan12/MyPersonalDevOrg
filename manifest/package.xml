@@ -7,6 +7,8 @@
 	<types>
         <members>AccountContactclass</members>
         <members>AccountContactclass_TGN_TEST</members>
+		<members>AccountDeleteClass</members>
+		<members>AccountDeleteClass_TGN_TEST</members>
         <name>ApexClass</name>
     </types>
 
