@@ -10,12 +10,12 @@ public class AccountContactclass {
         // Get this ID.
         ID acctID = acct.ID;
         // Add a contact to this account.
-        Contact mario = new Contact(
+        /*Contact mario = new Contact(
             FirstName='Ario',
             LastName='Ruiz',
             Phone='8975551212',
             AccountId=acctID);
-        insert mario;
+        insert mario;*/
         return aclist;
     }
     
