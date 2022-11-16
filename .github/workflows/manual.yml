@@ -47,4 +47,4 @@ jobs:
     
     # Deploy
     - name : Deploy to SF Org
-      run: sfdx force:mdapi:deploy -d ./toDeploy -u Dev1 -w 10
+      run: sfdx force:mdapi:deploy -d ./toDeploy -u Dev1 
