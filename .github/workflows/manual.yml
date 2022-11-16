@@ -6,7 +6,7 @@ name: Deploy to Salesforce  Org
 # On Push to Master/Main this will be triggered.
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ]
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
