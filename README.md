@@ -1,4 +1,4 @@
-# Salesforce DX Pasroject: Next Steps to Automates
+# Salesforce DX Pasroject: Next Steps to Automatesfg
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
