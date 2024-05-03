@@ -40,3 +40,5 @@ toDeploy/objects/Account.object
 .sf/
 .github/workflows
 *.yml
+.github/workflows/manual.yml
+github/workflows/manual.yml
