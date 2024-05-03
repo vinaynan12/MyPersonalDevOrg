@@ -42,3 +42,4 @@ toDeploy/objects/Account.object
 *.yml
 .github/workflows/manual.yml
 github/workflows/manual.yml
+README.md
