@@ -39,3 +39,4 @@ toDeploy/objects/Account.object
 .sf/config.json
 .sf/
 .github/workflows
+*.yml
