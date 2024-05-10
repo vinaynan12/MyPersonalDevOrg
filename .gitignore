@@ -38,4 +38,10 @@ toDeploy/
 toDeploy/objects/Account.object
 .sf/config.json
 .sf/
-
+.github/workflows
+*.yml
+.github/workflows/manual.yml
+github/workflows/manual.yml
+README.md
+.github/**
+.github/**/*
