@@ -1,4 +1,4 @@
-# test Salesforce as12 DX Project: Next Steps to Automates
+# test Salesforce as122 DX Project: Next Steps to Automates
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
